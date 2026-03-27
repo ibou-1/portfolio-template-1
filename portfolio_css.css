@@ -1,0 +1,783 @@
+/* ============================================
+   PROFESSIONAL PORTFOLIO - STYLESHEET
+   Design: Clean, PDF-like with interactive elements
+   Colors: Warm brown (#6B4423) accent with professional grays
+   ============================================ */
+
+/* ============================================
+   1. RESET & BASE STYLES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f7f5;
+    letter-spacing: 0.3px;
+}
+
+/* ============================================
+   navigation section
+   ============================================ */
+
+   .dot-nav {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.dot.active {
+    background-color: #6B4423; /* Your brand brown */
+    transform: scale(1.3);
+}
+
+/* Tooltip text that appears when hovering */
+.dot span {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #6B4423;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.dot:hover span {
+    opacity: 1;
+}
+
+
+/* ============================================
+   2. TYPOGRAPHY
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #2c2c2c;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 0.8rem;
+    color: #555;
+}
+
+a {
+    background-color: #6B4423;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    background-color: #8B5A2B;
+    text-decoration: underline;
+}
+
+/* ============================================
+   3. LAYOUT & CONTAINER
+   ============================================ */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* ============================================
+   4. HEADER
+   ============================================ */
+/* Add this to your section class */
+
+.header {
+    background-color: #fff;
+    border-bottom: 2px solid #e5e5e5;
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.name {
+    font-size: 2rem;
+    color: #6B4423;
+    margin-bottom: 0.25rem;
+}
+
+.title {
+    font-size: 0.95rem;
+    color: #999;
+    font-weight: 500;
+}
+
+.print-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #6B4423;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.print-btn:hover {
+    background-color: #8B5A2B;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(107, 67, 35, 0.274);
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .print-btn {
+        width: 60%;
+        align-self: end;
+        text-align: center;
+    }
+}
+
+/* ============================================
+   5. HERO SECTION
+   ============================================ */
+
+.hero-section {
+    background-color: #fff;
+    padding: 3rem .6rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.hero-text p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    padding: 1rem;
+    background-color: #f8f7f5;
+    border-radius: 6px;
+    border-left: 4px solid #6B4423;
+}
+
+.contact-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.contact-value {
+    font-weight: 600;
+    color: #2c2c2c;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-section {
+        padding: 2rem 0;
+    }
+}
+
+/* ============================================
+   6. SECTIONS
+   ============================================ */
+
+.section {
+    background-color: #fff;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    scroll-margin-top: 120px;
+}
+
+@media (max-width: 768px) {
+    .section {
+    scroll-margin-top: 165px;
+    }
+}
+
+.section-header {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #f0ebe5;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.section-header:hover {
+    background-color: #e8dfd5;
+}
+
+.section-header h2 {
+    margin: 0;
+    color: #6B4423;
+    font-size: 1.5rem;
+}
+
+.toggle-icon {
+    font-size: 0.8rem;
+    color: #6B4423;
+    transition: transform 0.3s ease;
+}
+
+.section-header.collapsed .toggle-icon {
+    transform: rotate(-90deg);
+}
+
+.section-content {
+    padding: 2rem;
+    max-height: 2000px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.section-content.hidden {
+    max-height: 0;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+/* ============================================
+   7. EXPERIENCE ITEMS
+   ============================================ */
+
+.experience-item {
+    padding: 1.5rem;
+    border-left: 4px solid #6B4423;
+    margin-bottom: 1.5rem;
+    background-color: #fafaf9;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover {
+    background-color: #f5f1ed;
+    border-left-color: #8B5A2B;
+}
+
+.experience-item:last-child {
+    margin-bottom: 0;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+}
+
+.experience-header h3 {
+    margin: 0 0 0.3rem 0;
+}
+
+.company {
+    color: #875934;
+    font-weight: 600;
+    margin: 0;
+}
+
+.duration {
+    font-size: 0.9rem;
+    color: #999;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.description {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .experience-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .duration {
+        font-size: 0.85rem;
+    }
+}
+
+/* ============================================
+   8. EDUCATION ITEMS
+   ============================================ */
+
+.education-item {
+    padding: 1.5rem;
+    border-left: 4px solid #6B4423;
+    margin-bottom: 1.5rem;
+    background-color: #fafaf9;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.education-item:hover {
+    background-color: #f5f1ed;
+    border-left-color: #8B5A2B;
+}
+
+.education-item:last-child {
+    margin-bottom: 0;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.education-header h3 {
+    margin: 0 0 0.3rem 0;
+}
+
+.institution {
+    color: #6B4423;
+    font-weight: 600;
+    margin: 0;
+}
+
+.year {
+    font-size: 0.9rem;
+    color: #999;
+    font-weight: 600;
+}
+
+.field {
+    color: #666;
+    margin: 0;
+    font-style: italic;
+}
+
+/* ============================================
+   9. SKILLS SECTION
+   ============================================ */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-group {
+    padding: 1.5rem;
+    background-color: #fafaf9;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+}
+
+.skill-group h3 {
+    color: #6B4423;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #f0ebe5;
+    color: #6B4423;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid #e5dcd0;
+}
+
+.skill-tag:hover {
+    background-color: #6B4423;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   10. PROJECT ITEMS
+   ============================================ */
+
+.project-item {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: #fafaf9;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    box-shadow: 0 4px 12px rgba(107, 68, 35, 0.1);
+    border-color: #6B4423;
+}
+
+.project-item:last-child {
+    margin-bottom: 0;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+    gap: 1rem;
+}
+
+.project-header h3 {
+    margin: 0;
+    flex: 1;
+}
+
+.project-tech {
+    font-size: 0.85rem;
+    color: #6B4423;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* ============================================
+   11. CERTIFICATIONS
+   ============================================ */
+
+.certification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cert-item {
+    padding: 1rem 1.5rem;
+    background-color: #fafaf9;
+    border-radius: 6px;
+    border-left: 4px solid #6B4423;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.cert-item:before {
+    content: '✓';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #6B4423;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.5rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+.cert-item:hover {
+    background-color: #f5f1ed;
+    transform: translateX(4px);
+}
+
+/* ============================================
+   12. FOOTER CTA
+   ============================================ */
+
+.footer-cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.footer-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #6B4423;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #8B5A2B;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(107, 68, 35, 0.2);
+    text-decoration: none;
+}
+
+/* ============================================
+   13. FOOTER
+   ============================================ */
+
+.footer {
+    background-color: #2c2c2c;
+    color: #999;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0;
+    color: #999;
+}
+
+/* ============================================
+   14. PRINT STYLES
+   ============================================ */
+
+@media print {
+    body {
+        background-color: #fff;
+    }
+
+    .header {
+        position: static;
+        border-bottom: 2px solid #333;
+        margin-bottom: 1rem;
+    }
+
+    .print-btn {
+        display: none !important;
+    }
+
+    .section-header {
+        background-color: #f0ebe5;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .section-header .toggle-icon {
+        display: none;
+    }
+
+    .section-content {
+        max-height: none !important;
+        padding: 1.5rem;
+    }
+
+    .section {
+        page-break-inside: avoid;
+        margin-bottom: 1rem;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .experience-item,
+    .education-item,
+    .project-item {
+        page-break-inside: avoid;
+    }
+
+    .footer {
+        margin-top: 2rem;
+        border-top: 1px solid #ddd;
+        page-break-inside: avoid;
+    }
+
+    a {
+        color: #6B4423;
+    }
+}
+
+/* ============================================
+   15. RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    .section-header {
+        padding: 1.2rem;
+    }
+
+    .section-content {
+        padding: 1.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-header {
+        flex-direction: column;
+    }
+
+    .project-tech {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .header-content {
+        gap: 0.5rem;
+    }
+
+    .name {
+        font-size: 1.3rem;
+    }
+
+    .title {
+        font-size: 0.85rem;
+    }
+
+    .print-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .hero-section {
+        padding: 1.5rem 0;
+    }
+
+    .section {
+        margin-bottom: 1rem;
+    }
+
+    .section-header {
+        padding: 1rem;
+    }
+
+    .section-content {
+        padding: 1rem;
+    }
+
+    .experience-item,
+    .education-item,
+    .project-item {
+        padding: 1rem;
+    }
+
+    .footer-cta {
+        padding: 2rem 1rem;
+    }
+}
