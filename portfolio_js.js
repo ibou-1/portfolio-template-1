@@ -12,17 +12,21 @@
 function toggleSection(button) {
     const content = button.nextElementSibling;
     button.classList.toggle('collapsed');
+    const dotId = button.parentElement.id.split('-')[0] + "-dot";
+    const dot = document.getElementById(dotId);
 
     if (content.classList.contains('hidden')) {
         content.classList.remove('hidden');
         content.style.maxHeight = content.scrollHeight + "px";
         content.style.paddingTop = "2rem";
         content.style.paddingBottom = "2rem";
+        dot.classList.remove('hidden');
     } else {
         content.classList.add('hidden');
         content.style.maxHeight = "0";
         content.style.paddingTop = "0";
         content.style.paddingBottom = "0";
+        dot.classList.add('hidden');
     }
 }
 
@@ -135,6 +139,14 @@ function initializePrint() {
             }
         })
     });
+}
+
+function printingThisPage(){
+    document.querySelectorAll('.experience-item, .education-item, .project-item, .skill-group').forEach((item) => {
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
+    });
+    console.log("done")
 }
 
 /**

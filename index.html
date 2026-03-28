@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="portfolio_css.css">
     <script src="portfolio_js.js" defer></script>
     <!--umami link for analitics-->
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="32c0d051-bd67-4b57-89e9-293d362ee679"></script>
+    <!-- <script defer src="https://cloud.umami.is/script.js" data-website-id="32c0d051-bd67-4b57-89e9-293d362ee679"></script> -->
 </head>
 
 <body>
@@ -24,7 +24,7 @@
                     📥 Print Resume PDF
                 </a>-->
                 <!--print window-->
-                <button class="print-btn" onclick="window.print()" data-umami-event="Print Pdf Click">
+                <button class="print-btn" onclick="printingThisPage(); window.print();"  data-umami-event="Print Pdf Click">
                     📥 Download PDF
                 </button>
             </div>
@@ -34,11 +34,11 @@
     <!-- Main Content -->
     <main class="container">
         <nav class="dot-nav">
-            <a href="#experience-section" class="dot" data-section="experience"><span>Experience</span></a>
-            <a href="#education-section" class="dot" data-section="education"><span>Education</span></a>
-            <a href="#skills-section" class="dot" data-section="skills"><span>Skills</span></a>
-            <a href="#projects-section" class="dot" data-section="projects"><span>Projects</span></a>
-            <a href="#achievements-section" class="dot" data-section="achievements"><span>Achievements</span></a>
+            <a href="#experience-section" class="dot" id="experience-dot" data-section="experience"><span>Experience</span></a>
+            <a href="#education-section" class="dot" id="education-dot" data-section="education"><span>Education</span></a>
+            <a href="#skills-section" class="dot" id="skills-dot" data-section="skills"><span>Skills</span></a>
+            <a href="#projects-section" class="dot" id="projects-dot" data-section="projects"><span>Projects</span></a>
+            <a href="#achievements-section" class="dot" id="achievements-dot" data-section="achievements"><span>Achievements</span></a>
         </nav>
         <!-- Hero Section -->
         <section class="hero-section" id="hero-section">
@@ -266,13 +266,13 @@
         <!-- Footer CTA -->
         <section class="footer-cta" id="cta-section">
             <p>Interested in working together?</p>
-            <a href="mailto:john.doe@example.com" class="cta-button" data-umami-event="CTA-Click">📧 Get in Touch</a>
+            <a href="mailto:john.doe@example.com" class="cta-button" data-umami-event="Email Button Click">📧 Get in Touch</a>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 John Doe. All rights reserved.</p>
+        <p>&copy; 2026 John Doe. All rights reserved.</p>
     </footer>
 </body>
 
