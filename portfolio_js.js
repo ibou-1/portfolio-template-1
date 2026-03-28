@@ -138,6 +138,9 @@ function initializePrint() {
                 toggleSection(header);
             }
         })
+        document.getElementById("footer").style.display = "block";
+        document.getElementById("cta-link").style.display = "none";
+        document.getElementById("cta-button").style.display = "inline-block";
     });
 }
 
@@ -146,7 +149,9 @@ function printingThisPage(){
         item.style.opacity = '1';
         item.style.transform = 'translateY(0)';
     });
-    console.log("done")
+    document.getElementById("footer").style.display = "none";
+    document.getElementById("cta-link").style.display = "block";
+    document.getElementById("cta-button").style.display = "none";
 }
 
 /**

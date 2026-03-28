@@ -10,20 +10,47 @@
 
 /*colors*/
 
-:root{
+:root {
     --main_color : hsl(27, 51%, 28%);
-    --hover_1_color : hsl(from var(--main_color) calc(h + 2) calc(s + 2) calc(l + 8));
-    --header_hover_color:  hsl(from var(--main_color) calc(h + 5) calc(s - 22) calc(l + 59));
-    --items_hover_color: hsl(from var(--main_color) calc(h + 3) calc(s - 22) calc(l + 67));
-    --company_names_color : hsl(from var(--main_color) h calc(s - 7) calc(l + 9));
+
+    /* We use clamp(0%, calc(...), 100%) to lock the values */
+    
+    --hover_1_color : hsl(from var(--main_color) 
+        calc(h + 2) 
+        clamp(0, calc(s + 2), 100) 
+        clamp(0, calc(l + 8), 100));
+
+    --header_hover_color: hsl(from var(--main_color) 
+        calc(h + 5) 
+        clamp(0, calc(s - 22), 100) 
+        clamp(0, calc(l + 59), 100));
+
+    --items_hover_color: hsl(from var(--main_color) 
+        calc(h + 3) 
+        clamp(0, calc(s - 22), 100) 
+        clamp(0, calc(l + 67), 100));
+
+    --company_names_color : hsl(from var(--main_color) 
+        h 
+        clamp(0, calc(s - 7), 100) 
+        clamp(0, calc(l + 9), 100));
+
+    --section_header_and_skills_tag_color: hsl(from var(--main_color) 
+        calc(h + 6) 
+        clamp(0, calc(s - 24), 100) 
+        clamp(0, calc(l + 64), 100));
+
+    --skill_tag_border_color: hsl(from var(--main_color) 
+        calc(h + 7) 
+        clamp(0, calc(s - 22), 100) 
+        clamp(0, calc(l + 58), 100));
+
     --footer_bg_color : #2c2c2c;
     --text_1_color : #333;
+    --section_bg_color: #fff;
     --text_2_color : #666;
     --text_3_color : #999;
     --text_4_color : #ccc;
-    --section_header_and_skills_tag_color: hsl(from var(--main_color) calc(h + 6) calc(s - 24) calc(l + 64));;
-    --skill_tag_border_color: hsl(from var(--main_color) calc(h + 7) calc(s - 22) calc(l + 58));;
-    --section_bg_color: #fff;
 }
 
 * {
