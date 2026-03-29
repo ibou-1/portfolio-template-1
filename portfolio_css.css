@@ -1,9 +1,4 @@
-/* ============================================
-   PROFESSIONAL PORTFOLIO - STYLESHEET
-   Design: Clean, PDF-like with interactive elements
-   Colors: Warm brown (var(--main_color)) accent with professional grays
-   ============================================ */
-
+/* koulla section fih lfo9 "===..." bach n3llam koulla wa7da */
 /* ============================================
    1. RESET & BASE STYLES
    ============================================ */
@@ -644,22 +639,20 @@ a:hover {
     color: var(--text_2_color);
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: var(--main_color);
-    color: #fff;
-    border-radius: 6px;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+#social-media-logos-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
-.cta-button:hover {
-    background-color: var(--hover_1_color);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(107, 68, 35, 0.2);
-    text-decoration: none;
+#social-media-logos-container a {
+    background-color: transparent;
+}
+
+.social-media-img {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
 }
 
 /* ============================================

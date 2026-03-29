@@ -139,8 +139,8 @@ function initializePrint() {
             }
         })
         document.getElementById("footer").style.display = "block";
-        document.getElementById("cta-link").style.display = "none";
-        document.getElementById("cta-button").style.display = "inline-block";
+        document.getElementById("social-media-links-container").style.display = "none";
+        document.getElementById("social-media-logos-container").style.display = "inline-block";
     });
 }
 
@@ -150,8 +150,8 @@ function printingThisPage(){
         item.style.transform = 'translateY(0)';
     });
     document.getElementById("footer").style.display = "none";
-    document.getElementById("cta-link").style.display = "block";
-    document.getElementById("cta-button").style.display = "none";
+    document.getElementById("social-media-links-container").style.display = "block";
+    document.getElementById("social-media-logos-container").style.display = "none";
 }
 
 /**
