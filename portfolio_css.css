@@ -673,7 +673,7 @@ a:hover {
 }
 
 /* ============================================
-   14. PRINT STYLES
+   14. PRINT STYLES & INGOING DOT
    ============================================ */
 .pulse-dot {
     display: inline-block;
@@ -706,55 +706,8 @@ a:hover {
 }
 
 @media print {
-    body {
-       background-color: var(--section_bg_color);
-    }
-
-    .header {
-        position: static;
-        border-bottom: 2px solid var(--text_1_color);
-        margin-bottom: 1rem;
-    }
-
     .print-btn {
         display: none !important;
-    }
-
-    .section-header {
-        background-color: var(--section_header_and_skills_tag_color);
-        border-bottom: 2px solid #ddd;
-    }
-
-    .section-header .toggle-icon {
-        display: none;
-    }
-
-    .section-content {
-        max-height: none !important;
-        padding: 1.5rem;
-    }
-
-    .section {
-        page-break-inside: avoid;
-        margin-bottom: 1rem;
-        box-shadow: none;
-        border: 1px solid #ddd;
-    }
-
-    .experience-item,
-    .education-item,
-    .project-item {
-        page-break-inside: avoid;
-    }
-
-    .footer {
-        margin-top: 2rem;
-        border-top: 1px solid #ddd;
-        page-break-inside: avoid;
-    }
-
-    a {
-        color: var(--main_color);
     }
 }
 

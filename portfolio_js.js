@@ -118,41 +118,6 @@ function handleResize() {
     });
 }
 
-/**
- * Add print functionality
- */
-function initializePrint() {
-    // Expand all sections before printing
-    window.addEventListener('beforeprint', () => {
-        const sectionHeaders = document.querySelectorAll('.section-header.collapsed');
-        sectionHeaders.forEach((header) => {
-            toggleSection(header);
-        });
-    });
-
-    // Collapse sections after printing
-    window.addEventListener('afterprint', () => {
-        const expandedSections = document.querySelectorAll('.section-header:not(.collapsed)');
-        expandedSections.forEach((header) => {
-            if (!header.classList.contains('collapsed')) {
-                toggleSection(header);
-            }
-        })
-        document.getElementById("footer").style.display = "block";
-        document.getElementById("social-media-links-container").style.display = "none";
-        document.getElementById("social-media-logos-container").style.display = "inline-block";
-    });
-}
-
-function printingThisPage(){
-    document.querySelectorAll('.experience-item, .education-item, .project-item, .skill-group').forEach((item) => {
-        item.style.opacity = '1';
-        item.style.transform = 'translateY(0)';
-    });
-    document.getElementById("footer").style.display = "none";
-    document.getElementById("social-media-links-container").style.display = "block";
-    document.getElementById("social-media-logos-container").style.display = "none";
-}
 
 /**
  * Add active link highlighting based on scroll position
@@ -194,9 +159,6 @@ function initializePortfolio() {
     // Initialize scroll animations
     initializeScrollAnimations();
 
-    // Initialize print functionality
-    initializePrint();
-
     // Initialize active links
     initializeActiveLinks();
 
@@ -208,24 +170,3 @@ function initializePortfolio() {
  * Run initialization when DOM is fully loaded
  */
 document.addEventListener('DOMContentLoaded', initializePortfolio);
-
-/**
- * Optional: Add keyboard navigation support
- */
-document.addEventListener('keydown', (e) => {
-    // Press 'P' to print
-    if (e.key === 'p' && (e.ctrlKey || e.metaKey)) {
-        e.preventDefault();
-        window.print();
-    }
-
-    // Press 'Escape' to collapse all sections
-    if (e.key === 'Escape') {
-        const expandedSections = document.querySelectorAll('.section-header:not(.collapsed)');
-        expandedSections.forEach((header) => {
-            if (!header.classList.contains('collapsed')) {
-                toggleSection(header);
-            }
-        });
-    }
-});
