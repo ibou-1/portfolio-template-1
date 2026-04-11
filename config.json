@@ -116,28 +116,28 @@
         "title": "Interested in working together?",
 
         "instagram-visibility": "show",
-        "instagram-url": "www.instagram.com",
+        "instagram-url": "https://instagram.com",
 
         "facebook-visibility": "show",
-        "facebook-url": "www.facebook.com",
+        "facebook-url": "https://facebook.com",
 
         "github-visibility": "show",
-        "github-url": "www.github.com",
+        "github-url": "https://github.com",
 
         "gmail-visibility": "show",
-        "gmail-url": "example@example.com",
+        "gmail-url": "mailto:example@example.com",
 
         "linkedin-visibility": "show",
-        "linkedin-url": "www.linkedin.com",
+        "linkedin-url": "https://linkedin.com",
 
         "reddit-visibility": "show",
-        "reddit-url": "www.reddit.com",
+        "reddit-url": "https://reddit.com",
 
         "whatsapp-visibility": "show",
-        "whatsapp-url": "0600000000",
-        
+        "whatsapp-url": "https://wa.me/0600000000",
+
         "x-visibility": "show",
-        "x-url": "x.com"
+        "x-url": "https://x.com"
     },
     "copy-right-section":{
         "text": "2026 John Doe. All rights reserved."

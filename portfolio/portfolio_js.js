@@ -338,15 +338,10 @@ function renderSocialMedia(socialData) {
         const isVisible = socialData[`${name}-visibility`] === "show";
         el.style.display = isVisible ? "" : "none";
 
-        if (isVisible) {
-            const val = socialData[`${name}-url`];
-            let prefix = "https://";
+        const val = socialData[`${name}-url`];
 
-            if (name === "gmail") prefix = "mailto:";
-            if (name === "whatsapp") prefix = "https://wa.me/";
-
-            el.href = prefix + val;
-        }
+        el.href = val;
+        
     });
 }
 
