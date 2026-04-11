@@ -3,49 +3,25 @@
    1. RESET & BASE STYLES
    ============================================ */
 
-/*colors*/
-
 :root {
-    --main_color : hsl(27, 51%, 28%);
+    --main-color: black;
 
-    /* We use clamp(0%, calc(...), 100%) to lock the values */
-    
-    --hover_1_color : hsl(from var(--main_color) 
-        calc(h + 2) 
-        clamp(0, calc(s + 2), 100) 
-        clamp(0, calc(l + 8), 100));
+    --hover-1-color: hsl(from var(--main-color) calc(h + 2) clamp(0, calc(s + 2), 100) clamp(0, calc(l + 8), 100));
 
-    --header_hover_color: hsl(from var(--main_color) 
-        calc(h + 5) 
-        clamp(0, calc(s - 22), 100) 
-        clamp(0, calc(l + 59), 100));
+    --header-hover-color: hsl(from var(--main-color) calc(h + 5) clamp(0, calc(s - 22), 100) clamp(0, calc(l + 59), 100));
 
-    --items_hover_color: hsl(from var(--main_color) 
-        calc(h + 3) 
-        clamp(0, calc(s - 22), 100) 
-        clamp(0, calc(l + 67), 100));
+    --items-hover-color: hsl(from var(--main-color) calc(h + 3) clamp(0, calc(s - 22), 100) clamp(0, calc(l + 67), 100));
 
-    --company_names_color : hsl(from var(--main_color) 
-        h 
-        clamp(0, calc(s - 7), 100) 
-        clamp(0, calc(l + 9), 100));
+    --company-names-color: hsl(from var(--main-color) h clamp(0, calc(s - 7), 100) clamp(0, calc(l + 9), 100));
 
-    --section_header_and_skills_tag_color: hsl(from var(--main_color) 
-        calc(h + 6) 
-        clamp(0, calc(s - 24), 100) 
-        clamp(0, calc(l + 64), 100));
+    --section-header-and-skills-tag-color: hsl(from var(--main-color) calc(h + 6) clamp(0, calc(s - 24), 100) clamp(0, calc(l + 64), 100));
 
-    --skill_tag_border_color: hsl(from var(--main_color) 
-        calc(h + 7) 
-        clamp(0, calc(s - 22), 100) 
-        clamp(0, calc(l + 58), 100));
+    --skill-tag-border-color: hsl(from var(--main-color) calc(h + 7) clamp(0, calc(s - 22), 100) clamp(0, calc(l + 58), 100));
 
-    --footer_bg_color : #2c2c2c;
-    --text_1_color : #333;
-    --section_bg_color: #fff;
-    --text_2_color : #666;
-    --text_3_color : #999;
-    --text_4_color : #ccc;
+    --text-1-color: #333;
+    --text-2-color: #666;
+    --text-3-color: #999;
+    --dot-color: #ccc;
 }
 
 * {
@@ -60,16 +36,20 @@ html {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: var(--text_1_color);
+    color: var(--text-1-color);
     background-color: #f8f7f5;
     letter-spacing: 0.3px;
+}
+
+.hidden {
+    display: none;
 }
 
 /* ============================================
    navigation section
    ============================================ */
 
-   .dot-nav {
+.dot-nav {
     position: fixed;
     right: 10px;
     top: 50%;
@@ -83,28 +63,27 @@ body {
 .dot {
     width: 12px;
     height: 12px;
-    background-color: var(--text_4_color);
+    background-color: var(--dot-color);
     border-radius: 50%;
     transition: all 0.3s ease;
     position: relative;
 }
 
 .dot.active {
-    background-color: var(--main_color); /* Your brand brown */
+    background-color: var(--main-color);
     transform: scale(1.3);
 }
 
-.dot.hidden{
+.dot.hidden {
     display: none;
 }
 
-/* Tooltip text that appears when hovering */
 .dot span {
     position: absolute;
     right: 25px;
     top: 50%;
     transform: translateY(-50%);
-    background: var(--main_color);
+    background: var(--main-color);
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
@@ -123,7 +102,12 @@ body {
    2. TYPOGRAPHY
    ============================================ */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     letter-spacing: -0.5px;
     color: #2c2c2c;
@@ -150,14 +134,8 @@ p {
 }
 
 a {
-    background-color: var(--main_color);
     text-decoration: none;
     transition: color 0.3s ease;
-}
-
-a:hover {
-    background-color: var(--hover_1_color);
-    text-decoration: underline;
 }
 
 /* ============================================
@@ -170,19 +148,13 @@ a:hover {
     padding: 0 2rem;
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 0 1rem;
-    }
-}
 
 /* ============================================
    4. HEADER
    ============================================ */
-/* Add this to your section class */
 
 .header {
-   background-color: var(--section_bg_color);
+    background-color: var(--section-bg-color);
     border-bottom: 2px solid #e5e5e5;
     padding: 0.5rem 0;
     position: sticky;
@@ -200,19 +172,19 @@ a:hover {
 
 .name {
     font-size: 2rem;
-    color: var(--main_color);
+    color: var(--main-color);
     margin-bottom: 0.25rem;
 }
 
 .title {
     font-size: 0.95rem;
-    color: var(--text_3_color);
+    color: var(--text-3-color);
     font-weight: 500;
 }
 
 .print-btn {
     padding: 0.75rem 1.5rem;
-    background-color: var(--main_color);
+    background-color: var(--main-color);
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -224,35 +196,19 @@ a:hover {
 }
 
 .print-btn:hover {
-    background-color: var(--hover_1_color);
+    background-color: var(--hover-1-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(107, 67, 35, 0.274);
 }
 
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        align-items: start;
-        gap: 1rem;
-    }
 
-    .name {
-        font-size: 1.5rem;
-    }
-
-    .print-btn {
-        width: 60%;
-        align-self: end;
-        text-align: center;
-    }
-}
 
 /* ============================================
    5. HERO SECTION
    ============================================ */
 
 .hero-section {
-   background-color: var(--section_bg_color);
+    background-color: var(--section-bg-color);
     padding: 3rem .6rem;
     margin-bottom: 2rem;
     border-radius: 8px;
@@ -282,14 +238,14 @@ a:hover {
     padding: 1rem;
     background-color: #f8f7f5;
     border-radius: 6px;
-    border-left: 4px solid var(--main_color);
+    border-left: 4px solid var(--main-color);
 }
 
 .contact-label {
     display: block;
     font-size: 0.75rem;
     font-weight: 700;
-    color: var(--text_3_color);
+    color: var(--text-3-color);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 0.5rem;
@@ -301,23 +257,12 @@ a:hover {
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .hero-section {
-        padding: 2rem 0;
-    }
-}
-
 /* ============================================
    6. SECTIONS
    ============================================ */
 
 .section {
-   background-color: var(--section_bg_color);
+    background-color: var(--section-bg-color);
     margin-bottom: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -325,16 +270,10 @@ a:hover {
     scroll-margin-top: 120px;
 }
 
-@media (max-width: 768px) {
-    .section {
-    scroll-margin-top: 165px;
-    }
-}
-
 .section-header {
     width: 100%;
     padding: 1.5rem;
-    background-color: var(--section_header_and_skills_tag_color);
+    background-color: var(--section-header-and-skills-tag-color);
     border: none;
     cursor: pointer;
     display: flex;
@@ -345,18 +284,18 @@ a:hover {
 }
 
 .section-header:hover {
-    background-color: var(--header_hover_color);
+    background-color: var(--header-hover-color);
 }
 
 .section-header h2 {
     margin: 0;
-    color: var(--main_color);
+    color: var(--main-color);
     font-size: 1.5rem;
 }
 
 .toggle-icon {
     font-size: 0.8rem;
-    color: var(--main_color);
+    color: var(--main-color);
     transition: transform 0.3s ease;
 }
 
@@ -383,7 +322,7 @@ a:hover {
 
 .experience-item {
     padding: 1.5rem;
-    border-left: 4px solid var(--main_color);
+    border-left: 4px solid var(--main-color);
     margin-bottom: 1.5rem;
     background-color: #fafaf9;
     border-radius: 4px;
@@ -391,8 +330,8 @@ a:hover {
 }
 
 .experience-item:hover {
-    background-color: var(--items_hover_color);
-    border-left-color: var(--hover_1_color);
+    background-color: var(--items-hover-color);
+    border-left-color: var(--hover-1-color);
 }
 
 .experience-item:last-child {
@@ -411,33 +350,22 @@ a:hover {
 }
 
 .company {
-    color: var(--company_names_color);
+    color: var(--company-names-color);
     font-weight: 600;
     margin: 0;
 }
 
 .duration {
     font-size: 0.9rem;
-    color: var(--text_3_color);
+    color: var(--text-3-color);
     font-weight: 600;
     white-space: nowrap;
 }
 
 .description {
-    color: var(--text_2_color);
+    color: var(--text-2-color);
     line-height: 1.6;
     margin: 0;
-}
-
-@media (max-width: 768px) {
-    .experience-header {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .duration {
-        font-size: 0.85rem;
-    }
 }
 
 /* ============================================
@@ -446,7 +374,7 @@ a:hover {
 
 .education-item {
     padding: 1.5rem;
-    border-left: 4px solid var(--main_color);
+    border-left: 4px solid var(--main-color);
     margin-bottom: 1.5rem;
     background-color: #fafaf9;
     border-radius: 4px;
@@ -454,8 +382,8 @@ a:hover {
 }
 
 .education-item:hover {
-    background-color: var(--items_hover_color);
-    border-left-color: var(--hover_1_color);
+    background-color: var(--items-hover-color);
+    border-left-color: var(--hover-1-color);
 }
 
 .education-item:last-child {
@@ -474,19 +402,19 @@ a:hover {
 }
 
 .institution {
-    color: var(--main_color);
+    color: var(--main-color);
     font-weight: 600;
     margin: 0;
 }
 
 .year {
     font-size: 0.9rem;
-    color: var(--text_3_color);
+    color: var(--text-3-color);
     font-weight: 600;
 }
 
 .field {
-    color: var(--text_2_color);
+    color: var(--text-2-color);
     margin: 0;
     font-style: italic;
 }
@@ -509,7 +437,7 @@ a:hover {
 }
 
 .skill-group h3 {
-    color: var(--main_color);
+    color: var(--main-color);
     margin-bottom: 1rem;
     font-size: 1.1rem;
 }
@@ -523,17 +451,17 @@ a:hover {
 .skill-tag {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background-color: var(--section_header_and_skills_tag_color);
-    color: var(--main_color);
+    background-color: var(--section-header-and-skills-tag-color);
+    color: var(--main-color);
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 1px solid var(--skill_tag_border_color);
+    border: 1px solid var(--skill-tag-border-color);
 }
 
 .skill-tag:hover {
-    background-color: var(--main_color);
+    background-color: var(--main-color);
     color: #fff;
     transform: translateY(-2px);
 }
@@ -553,7 +481,7 @@ a:hover {
 
 .project-item:hover {
     box-shadow: 0 4px 12px rgba(107, 68, 35, 0.1);
-    border-color: var(--main_color);
+    border-color: var(--main-color);
 }
 
 .project-item:last-child {
@@ -575,7 +503,7 @@ a:hover {
 
 .project-tech {
     font-size: 0.85rem;
-    color: var(--main_color);
+    color: var(--main-color);
     font-weight: 600;
     white-space: nowrap;
 }
@@ -594,7 +522,7 @@ a:hover {
     padding: 1rem 1.5rem;
     background-color: #fafaf9;
     border-radius: 6px;
-    border-left: 4px solid var(--main_color);
+    border-left: 4px solid var(--main-color);
     display: flex;
     align-items: center;
     transition: all 0.3s ease;
@@ -605,7 +533,7 @@ a:hover {
     display: inline-block;
     width: 1.5rem;
     height: 1.5rem;
-    background-color: var(--main_color);
+    background-color: var(--main-color);
     color: #fff;
     border-radius: 50%;
     text-align: center;
@@ -616,7 +544,7 @@ a:hover {
 }
 
 .cert-item:hover {
-    background-color: var(--items_hover_color);
+    background-color: var(--items-hover-color);
     transform: translateX(4px);
 }
 
@@ -627,7 +555,7 @@ a:hover {
 .footer-cta {
     text-align: center;
     padding: 3rem 2rem;
-   background-color: var(--section_bg_color);
+    background-color: var(--section-bg-color);
     border-radius: 8px;
     margin-bottom: 2rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -636,7 +564,7 @@ a:hover {
 .footer-cta p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    color: var(--text_2_color);
+    color: var(--text-2-color);
 }
 
 #social-media-logos-container {
@@ -645,14 +573,36 @@ a:hover {
     gap: 1.5rem;
 }
 
-#social-media-logos-container a {
-    background-color: transparent;
+.social-media-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30%;
+    width: 50px;
+    aspect-ratio: 1/1;
+    padding: 2px;
+    background-color: var(--main-color);
+    transition: all 0.3s ease;
 }
 
-.social-media-img {
+.social-media-img>svg {
     width: 40px;
     height: 40px;
-    transition: all 0.3s ease;
+    fill: white;
+}
+
+.social-media-img:hover>svg {
+    fill: var(--main-color)
+}
+
+.social-media-img:hover {
+    background-color: white;
+    transform: translateY(-2px);
+}
+
+#linkedin-logo {
+    height: 100%;
+    width: 100%;
 }
 
 /* ============================================
@@ -660,8 +610,8 @@ a:hover {
    ============================================ */
 
 .footer {
-    background-color: var(--footer_bg_color);
-    color: var(--text_3_color);
+    background-color: #2c2c2c;
+    color: var(--text-3-color);
     text-align: center;
     padding: 2rem;
     font-size: 0.9rem;
@@ -669,41 +619,12 @@ a:hover {
 
 .footer p {
     margin: 0;
-    color: var(--text_3_color);
+    color: var(--text-3-color);
 }
 
 /* ============================================
-   14. PRINT STYLES & INGOING DOT
+   14. PRINT STYLES
    ============================================ */
-.pulse-dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background-color: #2ecc71; /* A nice "Active" Green */
-    border-radius: 50%;
-    margin-left: 8px;
-    position: relative;
-    vertical-align: middle;
-}
-
-/* This creates the "wave" effect behind the dot */
-.pulse-dot::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #2ecc71;
-    border-radius: 50%;
-    z-index: -1;
-    animation: pulse-ring 2s infinite;
-}
-
-@keyframes pulse-ring {
-    0% { transform: scale(0.5); opacity: 0.8; }
-    100% { transform: scale(2.5); opacity: 0; }
-}
 
 @media print {
     .print-btn {
@@ -746,6 +667,48 @@ a:hover {
 
     .project-tech {
         white-space: normal;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .print-btn {
+        width: 60%;
+        align-self: end;
+        text-align: center;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-section {
+        padding: 2rem 0;
+    }
+
+    .section {
+        scroll-margin-top: 165px;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .duration {
+        font-size: 0.85rem;
     }
 }
 

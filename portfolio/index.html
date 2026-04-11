@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title></title>
+    <link rel="stylesheet" href="portfolio_css.css">
+    <script src="portfolio_js.js" defer></script>
+</head>
+
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <h1 class="name"></h1>
+                    <p class="title"></p>
+                </div>
+                <a target="_blank" class="print-btn" style="text-decoration: none;"></a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+        <nav class="dot-nav">
+            <a href="#experience-section" class="dot" id="experience-dot"
+                data-section="experience"><span>Experience</span></a>
+            <a href="#education-section" class="dot" id="education-dot"
+                data-section="education"><span>Education</span></a>
+            <a href="#skills-section" class="dot" id="skills-dot" data-section="skills"><span>Skills</span></a>
+            <a href="#projects-section" class="dot" id="projects-dot" data-section="projects"><span>Projects</span></a>
+            <a href="#achievements-section" class="dot" id="achievements-dot"
+                data-section="achievements"><span>Achievements</span></a>
+        </nav>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero-section">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h2></h2>
+                    <p id="hero-section-paragraph-1"></p>
+                    <p id="hero-section-paragraph-2"></p>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <p class="contact-value" id="email"></p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Phone</span>
+                        <p class="contact-value" id="phone"></p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Location</span>
+                        <p class="contact-value" id="location"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="section" id="experience-section">
+            <button class="section-header">
+                <h2>Work Experience</h2>
+                <span class="toggle-icon">▼</span>
+            </button>
+            <div class="section-content" id="experience-content"></div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section" id="education-section">
+            <button class="section-header">
+                <h2>Education</h2>
+                <span class="toggle-icon">▼</span>
+            </button>
+            <div class="section-content" id="education-content"></div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section" id="skills-section">
+            <button class="section-header">
+                <h2>Skills</h2>
+                <span class="toggle-icon">▼</span>
+            </button>
+            <div class="section-content">
+                <div class="skills-grid"></div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section" id="projects-section">
+            <button class="section-header">
+                <h2>Notable Projects</h2>
+                <span class="toggle-icon">▼</span>
+            </button>
+            <div class="section-content"></div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="section" id="achievements-section">
+            <button class="section-header">
+                <h2>Certifications & Achievements</h2>
+                <span class="toggle-icon">▼</span>
+            </button>
+            <div class="section-content">
+                <div class="certification-list"></div>
+            </div>
+        </section>
+
+        <!-- Footer CTA -->
+        <section class="footer-cta" id="cta-section">
+            <p id="cta-paragraph"></p>
+            <div id="social-media-logos-container">
+                <a id="instagram" target="_blank" rel="noopener noreferrer">
+                    <div class="social-media-img"><svg role="img" aria-label="Instagram" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Instagram</title>
+                            <path
+                                d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+                        </svg></div>
+                </a>
+
+                <a id="facebook" target="_blank" rel="noopener noreferrer">
+                    <div class="social-media-img"><svg role="img" aria-label="Facebook" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Facebook</title>
+                            <path
+                                d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
+                        </svg></div>
+                </a>
+
+                <a id="github" target="_blank" rel="noopener noreferrer">
+                    <div class="social-media-img"><svg role="img" aria-label="Github" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>GitHub</title>
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg></div>
+                </a>
+
+                <a id="gmail" target="_blank" rel="noopener noreferrer">
+                    <div class="social-media-img"><svg role="img" aria-label="Gmail" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Gmail</title>
+                            <path
+                                d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+                        </svg></div>
+                </a>
+
+                <a id="linkedin" target="_blank" rel="noopener noreferrer">
+                    <div class="social-media-img"><svg id="linkedin-logo" role="img" aria-label="Linkedin"
+                            viewBox="-5.5 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <title>linkedin</title>
+                            <path
+                                d="M0 8.219v15.563c0 1.469 1.156 2.625 2.625 2.625h15.563c0.719 0 1.406-0.344 1.844-0.781 0.469-0.469 0.781-1.063 0.781-1.844v-15.563c0-1.469-1.156-2.625-2.625-2.625h-15.563c-0.781 0-1.375 0.313-1.844 0.781-0.438 0.438-0.781 1.125-0.781 1.844zM2.813 10.281c0-1 0.813-1.875 1.813-1.875 1.031 0 1.875 0.875 1.875 1.875 0 1.031-0.844 1.844-1.875 1.844-1 0-1.813-0.813-1.813-1.844zM7.844 23.125v-9.531c0-0.219 0.219-0.406 0.375-0.406h2.656c0.375 0 0.375 0.438 0.375 0.719 0.75-0.75 1.719-0.938 2.719-0.938 2.438 0 4 1.156 4 3.719v6.438c0 0.219-0.188 0.406-0.375 0.406h-2.75c-0.219 0-0.375-0.219-0.375-0.406v-5.813c0-0.969-0.281-1.5-1.375-1.5-1.375 0-1.719 0.906-1.719 2.125v5.188c0 0.219-0.219 0.406-0.438 0.406h-2.719c-0.156 0-0.375-0.219-0.375-0.406zM2.875 23.125v-9.531c0-0.219 0.219-0.406 0.375-0.406h2.719c0.25 0 0.406 0.156 0.406 0.406v9.531c0 0.219-0.188 0.406-0.406 0.406h-2.719c-0.188 0-0.375-0.219-0.375-0.406z">
+                            </path>
+                        </svg></div>
+                </a>
+
+                <a id="reddit" target="_blank" rel="noopener noreferrer">
+                    <div class="social-media-img"><svg role="img" aria-label="Reddit" viewBox="0 0 512 512"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Reddit</title>
+                            <path d="M206.6,300.9c-12.5,0-22.6-10.1-22.6-22.3c0-12.5,10.1-22.6,22.6-22.6c12.3,0,22.3,10.1,22.3,22.6
+		                C228.9,290.9,218.8,300.9,206.6,300.9z M481,256c0,124.3-100.7,225-225,225S31,380.3,31,256S131.7,31,256,31S481,131.7,481,256z
+		                 M361,218.6c-8.5,0-16.1,3.5-21.6,9.1c-20.3-14.1-47.7-23.1-78.1-24.1l15.8-71l50.3,11.3c0,12.3,10.1,22.3,22.3,22.3
+		                c12.5,0,22.6-10.3,22.6-22.6S362.1,121,349.6,121c-8.8,0-16.3,5.3-20.1,12.5l-55.5-12.3c-2.7-0.7-5.5,1.3-6.3,4l-17.3,78.4
+		                c-30.1,1.3-57.2,10.3-77.6,24.3c-5.5-5.8-13.3-9.3-21.9-9.3c-31.7,0-42,42.6-13.1,57c-1,4.5-1.5,9.3-1.5,14.1
+		                c0,47.7,53.7,86.4,119.8,86.4c66.3,0,120-38.6,120-86.4c0-4.8-0.5-9.8-1.7-14.3C402.9,260.8,392.5,218.6,361,218.6L361,218.6z
+		                 M298.5,324c-16.5,16.5-69,16.2-84.9,0c-2-2-5.5-2-7.5,0c-2.3,2.3-2.3,5.8,0,7.8c20.7,20.7,79.2,20.7,100,0c2.3-2,2.3-5.5,0-7.8
+		                C304,322,300.5,322,298.5,324z M305.4,256c-12.3,0-22.3,10.1-22.3,22.6c0,12.3,10.1,22.3,22.3,22.3c12.5,0,22.6-10.1,22.6-22.3
+		                C328,266.1,318.1,256,305.4,256z" />
+                        </svg></div>
+                </a>
+
+                <a id="whatsapp" target="_blank" rel="noopener noreferrer">
+                    <div class="social-media-img"><svg role="img" aria-label="Whatsapp" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>WhatsApp</title>
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                        </svg></div>
+                </a>
+
+                <a id="x" target="_blank" rel="noopener noreferrer">
+                    <div class="social-media-img"><svg role="img" aria-label="X" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>X</title>
+                            <path
+                                d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" />
+                        </svg></div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <p></p>
+    </footer>
+</body>
+
+</html>

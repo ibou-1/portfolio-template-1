@@ -1,0 +1,145 @@
+{
+    "colors":{
+        "main-color": "hsl(27, 51%, 28%)",
+        "copy-right-color": "#2c2c2c",
+        "body-color": "#f8f7f5",
+        "sections-background-color": "#fff",
+        "text-1-color" : "#333",
+        "text-2-color" : "#666",
+        "text-3-color" : "#999",
+        "dot-color" : "#ccc"
+    },
+
+    "header-and-summary":{
+        "language": "en",
+        "page-title": "John Doe - Professional Portfolio",
+        "name": "John Doe",
+        "title": "Full Stack Developer",
+        "pdf-button-name": "📥 Print Resume PDF",
+        "pdf-url": "https://ibou-1.github.io/pdf/John%20Doe%20-%20Professional%20Portfolio.pdf",
+
+        "summary-title":"Professional Summary",
+        "hero-section-paragraph-1": "Experienced Full Stack Developer with 8+ years of expertise in building scalable web applications. Passionate about clean code, modern technologies, and creating exceptional user experiences. Currently seeking new opportunities to contribute my skills and grow professionally.",
+        "hero-section-paragraph-2": "Specialized in React, Node.js, and cloud technologies. Strong background in agile development, team collaboration, and delivering high-quality solutions on time.",
+        "email": "JohnDoe@example.com",
+        "phone": "+x (xxx) xxx-xxx",
+        "location": "New York, NY"
+    },
+
+    "work-experience":[
+        {
+            "title": "Senior Software Developer",
+            "company": "Tech Solutions Inc.",
+            "duration": "2022 - 2026",
+            "description": "Led development of full-stack web applications. Managed team of 5 developers. Implemented CI/CD pipelines and improved system performance by 40%."
+        },
+        {
+            "title": "Full Stack Developer",
+            "company": "Digital Innovations Ltd.",
+            "duration": "2020 - 2022",
+            "description": "Developed and maintained multiple client-facing applications. Collaborated with designers and product managers. Implemented responsive designs and optimized database queries."
+        },
+        {
+            "title": "Junior Developer",
+            "company": "StartUp Hub",
+            "duration": "2018 - 2020",
+            "description": "Built features for web and mobile applications. Participated in code reviews and learned best practices. Contributed to open-source projects."
+        }
+    ],
+
+    "education":[
+        {
+            "title": "Master of Science",
+            "institution": "University of Technology",
+            "year": "2015",
+            "field": "Computer Science"
+        },
+        {
+            "title": "Bachelor of Science",
+            "institution": "State University",
+            "year": "2013",
+            "field": "Information Technology"
+        },
+        {
+            "title": "Certification",
+            "institution": "Professional Institute",
+            "year": "2014",
+            "field": "Advanced Web Development"
+        }
+    ],
+
+    "skills": [
+        {
+            "category": "Frontend",
+            "tags": ["React", "JavaScript", "HTML/CSS", "Vue.js", "Tailwind CSS"]
+        },
+        {
+            "category": "Backend",
+            "tags": ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB"]
+        },
+        {
+            "category": "Tools & Platforms",
+            "tags": ["Git", "Docker", "AWS", "CI/CD", "Linux"]
+        },
+        {
+            "category": "Soft Skills",
+            "tags": ["Team Leadership", "Problem Solving", "Communication", "Project Management"]
+        }
+    ],
+
+    "projects": [
+        {
+            "name": "E-Commerce Platform",
+            "tech": "React, Node.js, PostgreSQL",
+            "description": "Built a full-featured e-commerce platform with payment integration, inventory management, and admin dashboard."
+        },
+        {
+            "name": "Analytics Dashboard",
+            "tech": "React, JavaScript, Charts",
+            "description": "Created a real-time analytics dashboard with data visualization and custom reporting features."
+        },
+        {
+            "name": "Mobile App API",
+            "tech": "Node.js, Express, MongoDB",
+            "description": "Developed RESTful API serving mobile application with authentication, caching, and rate limiting."
+        }
+    ],
+
+    "achievements": [
+        "AWS Certified Solutions Architect - Professional",
+        "Google Cloud Professional Cloud Developer",
+        "Certified Kubernetes Administrator (CKA)",
+        "Scrum Master Certification"
+    ],
+
+    "social-media":{
+        "title": "Interested in working together?",
+
+        "instagram-visibility": "show",
+        "instagram-url": "www.instagram.com",
+
+        "facebook-visibility": "show",
+        "facebook-url": "www.facebook.com",
+
+        "github-visibility": "show",
+        "github-url": "www.github.com",
+
+        "gmail-visibility": "show",
+        "gmail-url": "example@example.com",
+
+        "linkedin-visibility": "show",
+        "linkedin-url": "www.linkedin.com",
+
+        "reddit-visibility": "show",
+        "reddit-url": "www.reddit.com",
+
+        "whatsapp-visibility": "show",
+        "whatsapp-url": "0600000000",
+        
+        "x-visibility": "show",
+        "x-url": "x.com"
+    },
+    "copy-right-section":{
+        "text": "2026 John Doe. All rights reserved."
+    }
+}
