@@ -1,7 +1,27 @@
-/* koulla section fih lfo9 "===..." bach n3llam koulla wa7da */
 /* ============================================
    1. RESET & BASE STYLES
    ============================================ */
+   
+#demo-div {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 500px;
+    transform: translateX(-50%);
+    display: grid;
+    row-gap: 50rem;
+    z-index: 10;
+    pointer-events: none;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#demo-div h1 {
+    color: red;
+    opacity: 0.1;
+    font-size: 5rem;
+    transform: rotate(-15deg);
+}
 
 :root {
     --main-color: black;
@@ -315,6 +335,15 @@ a {
     padding: 0 2rem;
     overflow: hidden;
 }
+
+
+
+
+/* Copyright 2026 ibou1. All Rights Reserved. */
+
+
+
+
 
 /* ============================================
    7. EXPERIENCE ITEMS
@@ -769,3 +798,10 @@ a {
         padding: 2rem 1rem;
     }
 }
+
+
+
+
+
+
+/* Copyright 2026 ibou1. All Rights Reserved. */

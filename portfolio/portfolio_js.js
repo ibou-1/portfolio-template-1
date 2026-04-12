@@ -155,6 +155,34 @@ function initializePortfolio() {
  */
 document.addEventListener('DOMContentLoaded', initializePortfolio);
 
+//Copyright 2026 ibou1. All Rights Reserved.
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+document.addEventListener('keydown', function(event) {
+    if ((event.ctrlKey || event.metaKey) && event.key === 's') {
+        event.preventDefault();
+    }
+
+    if (event.key === "F12") {
+        event.preventDefault();
+    }
+
+    if (event.ctrlKey && event.shiftKey && event.key === "I") {
+        event.preventDefault();
+    }
+
+    if (event.ctrlKey && event.shiftKey && event.key === "J") {
+        event.preventDefault();
+    }
+
+    if (event.ctrlKey && event.key === "u") {
+        event.preventDefault();
+    }
+});
+
+//Copyright 2026 ibou1. All Rights Reserved.
+
 
 /*
 ========================
@@ -351,3 +379,9 @@ function renderCopyRight(copyRight) {
 }
 
 config()
+
+
+
+
+
+//Copyright 2026 ibou1. All Rights Reserved.

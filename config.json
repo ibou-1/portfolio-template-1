@@ -12,16 +12,16 @@
 
     "header-and-summary":{
         "language": "en",
-        "page-title": "John Doe - Professional Portfolio",
-        "name": "John Doe",
+        "page-title": "Ibou Flani - Professional Portfolio",
+        "name": "Ibou Flani",
         "title": "Full Stack Developer",
         "pdf-button-name": "📥 Print Resume PDF",
-        "pdf-url": "https://ibou-1.github.io/pdf/John%20Doe%20-%20Professional%20Portfolio.pdf",
+        "pdf-url": "https://ibou-1.github.io/pdf/Ibou%20Flani%20-%20Professional%20Portfolio.pdf",
 
         "summary-title":"Professional Summary",
         "hero-section-paragraph-1": "Experienced Full Stack Developer with 8+ years of expertise in building scalable web applications. Passionate about clean code, modern technologies, and creating exceptional user experiences. Currently seeking new opportunities to contribute my skills and grow professionally.",
         "hero-section-paragraph-2": "Specialized in React, Node.js, and cloud technologies. Strong background in agile development, team collaboration, and delivering high-quality solutions on time.",
-        "email": "JohnDoe@example.com",
+        "email": "ibouflani@example.com",
         "phone": "+x (xxx) xxx-xxx",
         "location": "New York, NY"
     },
@@ -116,7 +116,7 @@
         "title": "Interested in working together?",
 
         "instagram-visibility": "show",
-        "instagram-url": "https://instagram.com",
+        "instagram-url": "https://www.instagram.com/services_4_all/",
 
         "facebook-visibility": "show",
         "facebook-url": "https://facebook.com",
@@ -140,6 +140,6 @@
         "x-url": "https://x.com"
     },
     "copy-right-section":{
-        "text": "2026 John Doe. All rights reserved."
+        "text": "2026 Ibou Flani. All rights reserved."
     }
 }
