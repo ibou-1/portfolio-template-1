@@ -194,7 +194,8 @@ a {
     background: #ff9900;
     z-index: 1000;
     transition: all 0.5s ease;
-    animation: in 1s ease-in-out, play 1s infinite; 
+    animation: in 1s ease-in-out, play 1s infinite;
+    cursor: pointer;
 }
 
 #cart > svg {
