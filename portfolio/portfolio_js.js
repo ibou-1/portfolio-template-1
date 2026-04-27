@@ -138,6 +138,20 @@ function initializeActiveLinks() {
     });
 }
 
+window.addEventListener("click", (event) => {
+    const cartContent = document.getElementById("cart-content");
+    const openBtn = document.getElementById("cart");
+
+    // 1. If user clicks the button, show the cart
+    if (openBtn.contains(event.target)) {
+        cartContent.style.display = "grid";
+    } 
+    // 2. If user clicks outside the cart AND not on the button, hide it
+    else if (!cartContent.contains(event.target)) {
+        cartContent.style.display = "none";
+    }
+});
+
 /**
  * Initialize all interactive features
  */

@@ -181,6 +181,118 @@ a {
    4. HEADER
    ============================================ */
 
+#cart {
+    position: fixed;
+    justify-items: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    bottom: 15px;
+    right: 10px;
+    padding: 5px;
+    border-radius: 100%;
+    background: #ff9900;
+    z-index: 1000;
+    transition: all 0.5s ease;
+    animation: in 1s ease-in-out, play 1s infinite; 
+}
+
+#cart > svg {
+    transition: all 0.5s ease;
+    animation: in 1s ease-in-out;
+}
+
+@keyframes play {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes in {
+    0%, 80% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+#cart-content {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .5rem;
+    width: 150px;
+    bottom: 60px;
+    right: -10px;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1000;
+    animation: slideUp 0.5s ease;
+}
+
+.buy-btn{
+    transition: all 0.5s ease;
+}
+
+#cart-content .buy-btn:hover {
+    transform: translateX(-5px);
+}
+
+#cart-content.hidden {
+    display: none;
+}
+
+@keyframes slideUp {
+    from {
+        bottom: 0px;
+        opacity: 0;
+    }
+    to {
+        bottom: 60px;
+        opacity: 1;
+    }
+}
+
+#links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    justify-self: center;
+    width: 70%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#links h4{
+    grid-column: span 2;
+}
+
+.buy-btn {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    background-color: #ff9900;
+    color: #000000;
+    justify-self: center;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 90%;
+}
+
 .header {
     background-color: var(--section-bg-color);
     border-bottom: 2px solid #e5e5e5;
