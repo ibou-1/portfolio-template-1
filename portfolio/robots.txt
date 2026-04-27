@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ibou-1.github.io/portfolio-template-1/sitemap.xml
+Sitemap: https://ibou-1.github.io/portfolio-template-1/portfolio/sitemap.xml
